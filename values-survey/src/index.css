@@ -1,6 +1,26 @@
 @tailwind base;
 @tailwind components;
+.value-btn{
+  @apply ml-5 mr-1 p-2 my-2 text-gray-700 font-medium rounded-xl border-2 border-solid border-gray-300;
+}
+
+.value-btn:hover{
+  @apply transform -translate-y-1 border-yellow-500 shadow-lg cursor-pointer;
+}
 @tailwind utilities;
+
+.btn{
+  @apply px-7 py-3 rounded-2xl font-medium text-white;
+}
+
+.btn:hover{
+  @apply transform -translate-y-1 shadow-lg font-bold;
+}
+
+.btn-lift:hover{
+  @apply transform -translate-y-1 shadow-lg;
+}
+
 
 body {
   margin: 0;
