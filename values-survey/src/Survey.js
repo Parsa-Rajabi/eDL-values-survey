@@ -97,6 +97,10 @@ function Survey() {
         setSelectedValue([]);
     }
 
+    function handleExit(){
+        window.close();
+    }
+
     return <div className={"overflow-hidden"}>
         <img src={logo} alt={"eDL Logo"} width={500} className={"mx-10 "}/>
         <h1 className={"text-3xl font-semibold mx-10 text-gray-700"}>Values Inventory</h1>
@@ -146,7 +150,7 @@ function Survey() {
                 Try Again
                 </button>
                 <button className={"btn bg-red-500 my-2 ml-5"}
-                        onClick={(e) => window.close()}
+                        onClick={(e) => handleExit()}
                         type={"button"}>
                Exit
                 </button>
