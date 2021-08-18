@@ -9,19 +9,18 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import includes from "lodash/includes";
 import Tooltip from "./Tooltip";
+import {isArrayInArray} from "./Survey";
 
 function Value(props) {
     const {item, def, handleOnClick, selectedItems} = props;
 
     let isSelected = false;
-    if(includes(selectedItems, item)){
+    if(isArrayInArray(selectedItems, [item, def])){
         isSelected = true
-        console.log("isSelected" + isSelected)
     }
     return <span className={"block"}>
-        <button onClick={handleOnClick} value={item} className={`${isSelected && "bg-green-500"} ml-5 mr-1 p-2 my-2 rounded-xl border-2 border-gray-300 hover:bg-yellow-500 cursor-pointer"`}>
+        <button onClick={handleOnClick} value={def} id={item} className={`${isSelected && "shadow-lg transform -translate-y-1 border-orange-500 bg-yellow-500 border-yellow-500 text-white font-bold"} value-btn`}>
             {item}
         </button>
         <Tooltip text={def} toolTipID={item}/>
