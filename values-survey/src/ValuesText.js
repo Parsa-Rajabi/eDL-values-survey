@@ -50,7 +50,7 @@ export let VALUES_DEF = [
     "telling the truth and knowing that others are telling the truth",
     "having an important job title or social standing",
     "making decisions that impact an organization",
-    "trusted to be deliver my work",
+    "trusted to deliver my work",
     "believing in my core beliefs",
     "work that has many things happening at once",
     "working on my own schedule",
